@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#48BCFB"
     tools:context=".OpeningPage">
 
     <Button
@@ -37,6 +38,7 @@
         android:id="@+id/imageView"
         android:layout_width="169dp"
         android:layout_height="166dp"
+        android:background="#48BCFB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

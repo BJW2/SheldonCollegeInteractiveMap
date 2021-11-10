@@ -3,7 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_linqbuilding_teachers.xml" value="0.14447463768115942" />
+        <entry key="app/src/main/res/drawable/gradientbackground.xml" value="0.13541666666666666" />
+        <entry key="app/src/main/res/layout/activity_linqbuilding_teachers.xml" value="0.26039920797169797" />
         <entry key="app/src/main/res/layout/activity_maps.xml" value="0.11979166666666667" />
         <entry key="app/src/main/res/layout/activity_opening_page.xml" value="0.26134563207767153" />
       </map>
