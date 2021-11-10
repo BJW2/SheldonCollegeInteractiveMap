@@ -1,16 +1,20 @@
 package com.example.sheldoncollegeinteractivemap;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 
-import android.os.Bundle;
-
+import com.example.sheldoncollegeinteractivemap.databinding.ActivityMapsBinding;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.example.sheldoncollegeinteractivemap.databinding.ActivityMapsBinding;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -42,10 +46,64 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        //change the layout of the map
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
+        // Add a marker in
+        LatLng LINQBuilding = new LatLng(-27.568625, 153.233705);
+        Marker LINQ_Building = mMap.addMarker(new MarkerOptions().position(LINQBuilding).title("LINQ Building"));
+
+        // Add a marker in
+        LatLng SIblock = new LatLng(-27.569534, 153.23318);
+        Marker SI_Block = mMap.addMarker(new MarkerOptions().position(SIblock).title("SI Block"));
+
+        // Add a marker in
+        LatLng SCblock = new LatLng(-27.569145, 153.233383);
+        Marker SC_Block = mMap.addMarker(new MarkerOptions().position(SCblock).title("SC Block"));
+
+        // Add a marker in
+        LatLng SAblock = new LatLng(-27.569387, 153.234263);
+        Marker SA_Block = mMap.addMarker(new MarkerOptions().position(SAblock).title("SA Block"));
+
+        // Add a marker in
+        LatLng Stadium = new LatLng(-27.569477, 153.232579);
+        Marker Stadium_ = mMap.addMarker(new MarkerOptions().position(Stadium).title("Stadium"));
+
+
+        mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+            @Override
+            public void onInfoWindowClick(@NonNull Marker marker) {
+                if (marker.equals(LINQ_Building)){
+                    startActivity(new Intent(MapsActivity.this,LINQBuildingTeachers.class));
+                }
+
+                if (marker.equals(SI_Block)){
+                    startActivity(new Intent(MapsActivity.this,LINQBuildingTeachers.class));
+                }
+
+                if (marker.equals(SC_Block)){
+                    startActivity(new Intent(MapsActivity.this,LINQBuildingTeachers.class));
+                }
+
+                if (marker.equals(SA_Block)){
+                    startActivity(new Intent(MapsActivity.this,LINQBuildingTeachers.class));
+                }
+
+                if (marker.equals(Stadium_)){
+                    startActivity(new Intent(MapsActivity.this,LINQBuildingTeachers.class));
+                }
+            }
+        });
+
+        //move map view to camera
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(Stadium));
+        mMap.setMinZoomPreference(17);
+
+    }
+
+    private void toastMsg(String linqBuilding_clicked) {
+        Toast toast = Toast.makeText(this, linqBuilding_clicked, Toast.LENGTH_LONG);
+        toast.show();
     }
 }
