@@ -2,7 +2,6 @@ package com.example.sheldoncollegeinteractivemap;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
@@ -53,7 +52,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Add a marker in
         LatLng LINQBuilding = new LatLng(-27.568625, 153.233705);
         Marker LINQ_Building = mMap.addMarker(new MarkerOptions().position(LINQBuilding).title("LINQ Building"));
-
         // Add a marker in
         LatLng SIblock = new LatLng(-27.569534, 153.23318);
         Marker SI_Block = mMap.addMarker(new MarkerOptions().position(SIblock).title("SI Block"));
@@ -70,6 +68,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng Stadium = new LatLng(-27.569477, 153.232579);
         Marker Stadium_ = mMap.addMarker(new MarkerOptions().position(Stadium).title("Stadium"));
 
+ /*       mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(@NonNull Marker marker) {
+                if (marker.equals(LINQ_Building)) {
+                    LINQ_Building.showInfoWindow();
+                }
+                if (marker.equals(SI_Block)){
+                    SI_Block.showInfoWindow();
+                }
+                return false;
+            }
+        });*/
 
         mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
@@ -97,13 +107,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
         //move map view to camera
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(Stadium));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(LINQBuilding));
         mMap.setMinZoomPreference(17);
 
     }
 
-    private void toastMsg(String linqBuilding_clicked) {
-        Toast toast = Toast.makeText(this, linqBuilding_clicked, Toast.LENGTH_LONG);
-        toast.show();
-    }
 }
