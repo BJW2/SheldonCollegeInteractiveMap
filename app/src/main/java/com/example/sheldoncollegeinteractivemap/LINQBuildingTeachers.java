@@ -17,4 +17,8 @@ public class LINQBuildingTeachers extends AppCompatActivity {
     public void launchMapsActivity(View view) {
         startActivity(new Intent(LINQBuildingTeachers.this,MapsActivity.class));
     }
+
+    public void launchMrSinclairClasses(View view) {
+        startActivity(new Intent(LINQBuildingTeachers.this,MrSinclairClasses.class));
+    }
 }
