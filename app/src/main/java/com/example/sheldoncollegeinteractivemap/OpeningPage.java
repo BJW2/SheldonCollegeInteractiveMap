@@ -17,10 +17,10 @@ public class OpeningPage extends AppCompatActivity {
 
 
     public void launchMapsActivity(View view) {
-        startActivity(new Intent(OpeningPage.this,MapsActivity.class));
+        startActivity(new Intent(OpeningPage.this,MapsActivity.class)); //Starts the MapsActivity
     }
 
     public void launchLINQBuildingTeacher(View view) {
-        startActivity(new Intent(OpeningPage.this,LINQBuildingTeachers.class));
+        startActivity(new Intent(OpeningPage.this,LINQBuildingTeachers.class)); //Starts the LINQBuildingTeachers Activity
     }
 }

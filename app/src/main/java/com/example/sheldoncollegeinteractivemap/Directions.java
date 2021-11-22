@@ -15,6 +15,6 @@ public class Directions extends AppCompatActivity {
     }
 
     public void launchFinalActivity(View view) {
-        startActivity(new Intent(Directions.this,FinalActivity.class));
+        startActivity(new Intent(Directions.this,FinalActivity.class)); //Starts the Final Activity
     }
 }

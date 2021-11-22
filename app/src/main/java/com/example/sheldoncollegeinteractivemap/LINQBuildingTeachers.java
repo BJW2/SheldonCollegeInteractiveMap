@@ -15,10 +15,10 @@ public class LINQBuildingTeachers extends AppCompatActivity {
     }
 
     public void launchMapsActivity(View view) {
-        startActivity(new Intent(LINQBuildingTeachers.this,MapsActivity.class));
+        startActivity(new Intent(LINQBuildingTeachers.this,MapsActivity.class)); //Starts the MapsActivity
     }
 
     public void launchMrSinclairClasses(View view) {
-        startActivity(new Intent(LINQBuildingTeachers.this,MrSinclairClasses.class));
+        startActivity(new Intent(LINQBuildingTeachers.this,MrSinclairClasses.class)); //Starts the MrSinclairClasses Activity
     }
 }

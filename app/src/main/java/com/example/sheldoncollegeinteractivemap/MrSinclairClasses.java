@@ -15,6 +15,6 @@ public class MrSinclairClasses extends AppCompatActivity {
     }
 
     public void launchDirections(View view) {
-        startActivity(new Intent(MrSinclairClasses.this,Directions.class));
+        startActivity(new Intent(MrSinclairClasses.this, Directions.class)); //Starts the activity of Directions when the button is clicked
     }
 }

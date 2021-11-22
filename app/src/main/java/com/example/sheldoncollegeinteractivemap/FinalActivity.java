@@ -15,10 +15,10 @@ public class FinalActivity extends AppCompatActivity {
     }
 
     public void launchGoogle(View view) {
-        startActivity(new Intent(FinalActivity.this,OpeningPage.class));
+        startActivity(new Intent(FinalActivity.this,OpeningPage.class)); //Starts the Opening Page Activity
     }
 
     public void launchTeachers(View view) {
-        startActivity(new Intent(FinalActivity.this,LINQBuildingTeachers.class));
+        startActivity(new Intent(FinalActivity.this,LINQBuildingTeachers.class)); //Starts the LINQBuildingTeachers Activity
     }
 }

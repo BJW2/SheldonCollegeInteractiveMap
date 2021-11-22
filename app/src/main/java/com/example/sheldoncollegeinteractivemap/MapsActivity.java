@@ -49,53 +49,53 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 
 
-        // Add a marker in
+        // Add a marker for the LINQBuilding
         LatLng LINQBuilding = new LatLng(-27.568625, 153.233705);
         Marker LINQ_Building = mMap.addMarker(new MarkerOptions().position(LINQBuilding).title("LINQ Building"));
-        // Add a marker in
+        // Add a marker for the SIBlock
         LatLng SIblock = new LatLng(-27.569534, 153.23318);
         Marker SI_Block = mMap.addMarker(new MarkerOptions().position(SIblock).title("SI Block"));
 
-        // Add a marker in
+        // Add a marker for the SCBlock
         LatLng SCblock = new LatLng(-27.569145, 153.233383);
         Marker SC_Block = mMap.addMarker(new MarkerOptions().position(SCblock).title("SC Block"));
 
-        // Add a marker in
+        // Add a marker for the SABlock
         LatLng SAblock = new LatLng(-27.569387, 153.234263);
         Marker SA_Block = mMap.addMarker(new MarkerOptions().position(SAblock).title("SA Block"));
 
-        // Add a marker in
+        // Add a marker for the Stadium
         LatLng Stadium = new LatLng(-27.569477, 153.232579);
         Marker Stadium_ = mMap.addMarker(new MarkerOptions().position(Stadium).title("Stadium"));
 
         mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
             public void onInfoWindowClick(@NonNull Marker marker) {
-                if (marker.equals(LINQ_Building)){
-                    startActivity(new Intent(MapsActivity.this,LINQBuildingTeachers.class));
+                if (marker.equals(LINQ_Building)){ //If the marker is LINQBuilding run this method
+                    startActivity(new Intent(MapsActivity.this,LINQBuildingTeachers.class)); //Starts the activity for LINQBuildingTeachers
                 }
 
-                if (marker.equals(SI_Block)){
-                    startActivity(new Intent(MapsActivity.this,LINQBuildingTeachers.class));
+                if (marker.equals(SI_Block)){ //If the marker is SIBlock run this method
+                    startActivity(new Intent(MapsActivity.this,LINQBuildingTeachers.class)); //Starts the activity for LINQBuildingTeachers
                 }
 
-                if (marker.equals(SC_Block)){
-                    startActivity(new Intent(MapsActivity.this,LINQBuildingTeachers.class));
+                if (marker.equals(SC_Block)){ //If the marker is SCBlock run this method
+                    startActivity(new Intent(MapsActivity.this,LINQBuildingTeachers.class)); //Starts the activity for LINQBuildingTeachers
                 }
 
-                if (marker.equals(SA_Block)){
-                    startActivity(new Intent(MapsActivity.this,LINQBuildingTeachers.class));
+                if (marker.equals(SA_Block)){ //If the marker is SABlock run this method
+                    startActivity(new Intent(MapsActivity.this,LINQBuildingTeachers.class)); //Starts the activity for LINQBuildingTeachers
                 }
 
-                if (marker.equals(Stadium_)){
-                    startActivity(new Intent(MapsActivity.this,LINQBuildingTeachers.class));
+                if (marker.equals(Stadium_)){ ////If the marker is Stadium run this method
+                    startActivity(new Intent(MapsActivity.this,LINQBuildingTeachers.class)); //Starts the activity for LINQBuildingTeachers
                 }
             }
         });
 
         //move map view to camera
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(LINQBuilding));
-        mMap.setMinZoomPreference(17);
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(LINQBuilding)); //Moves the camera to the Marker LINQBuilding
+        mMap.setMinZoomPreference(17); //Sets the Zoom for the camera to be 17
 
     }
 
