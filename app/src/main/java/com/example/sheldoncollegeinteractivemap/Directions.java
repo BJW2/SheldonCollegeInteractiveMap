@@ -6,15 +6,15 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MrSinclairClasses extends AppCompatActivity {
+public class Directions extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mr_sinclair_classes);
+        setContentView(R.layout.activity_directions);
     }
 
-    public void launchDirections(View view) {
-        startActivity(new Intent(MrSinclairClasses.this,Directions.class));
+    public void launchFinalActivity(View view) {
+        startActivity(new Intent(Directions.this,FinalActivity.class));
     }
 }

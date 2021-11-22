@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/gradientbackground.xml" value="0.13541666666666666" />
+        <entry key="app/src/main/res/layout/activity_directions.xml" value="0.243996620881994" />
+        <entry key="app/src/main/res/layout/activity_final.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_linqbuilding_teachers.xml" value="0.26039920797169797" />
         <entry key="app/src/main/res/layout/activity_maps.xml" value="0.11979166666666667" />
         <entry key="app/src/main/res/layout/activity_mr_sinclair_classes.xml" value="0.25" />

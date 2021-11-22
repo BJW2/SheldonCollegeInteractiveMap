@@ -17,6 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SheldonCollegeInteractiveMap">
         <activity
+            android:name=".FinalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Directions"
+            android:exported="false" />
+        <activity
             android:name=".MrSinclairClasses"
             android:exported="false" />
         <activity
