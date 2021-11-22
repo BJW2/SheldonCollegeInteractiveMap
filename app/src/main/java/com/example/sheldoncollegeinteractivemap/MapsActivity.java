@@ -68,19 +68,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng Stadium = new LatLng(-27.569477, 153.232579);
         Marker Stadium_ = mMap.addMarker(new MarkerOptions().position(Stadium).title("Stadium"));
 
- /*       mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-            @Override
-            public boolean onMarkerClick(@NonNull Marker marker) {
-                if (marker.equals(LINQ_Building)) {
-                    LINQ_Building.showInfoWindow();
-                }
-                if (marker.equals(SI_Block)){
-                    SI_Block.showInfoWindow();
-                }
-                return false;
-            }
-        });*/
-
         mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
             public void onInfoWindowClick(@NonNull Marker marker) {
